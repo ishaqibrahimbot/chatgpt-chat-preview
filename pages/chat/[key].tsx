@@ -75,5 +75,5 @@ export default function Page({
     transform: transformFunction,
   });
 
-  return <div className="bg-gray-200 dark:bg-gray-700">{transformedHtml}</div>;
+  return <div className="bg-gray-200 dark:bg-gray-800">{transformedHtml}</div>;
 }
