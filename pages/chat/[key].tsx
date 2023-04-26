@@ -50,6 +50,14 @@ export default function Page({
           return convertNodeToElement(node, index, transformFunction);
         }
 
+        case "div": {
+          if (node.attribs.class && node.attribs.class.includes("m-auto")) {
+            node.attribs.class.replace("m-auto", "mx-auto");
+          }
+
+          return convertNodeToElement(node, index, transformFunction);
+        }
+
         case "img": {
           node.attribs.src = "/user-icon-2.png";
           node.attribs.srcset = "";
@@ -67,13 +75,5 @@ export default function Page({
     transform: transformFunction,
   });
 
-  //   console.log("TransformedHtml", transformedHtml);
-  return (
-    <div
-      //   dangerouslySetInnerHTML={{ __html: htmlContent }}
-      className="bg-gray-200"
-    >
-      {transformedHtml}
-    </div>
-  );
+  return <div className="bg-gray-200 dark:bg-gray-700">{transformedHtml}</div>;
 }
