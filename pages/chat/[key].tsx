@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { fetchHtmlContentFile, getS3Client } from "@/lib/s3-helper";
 import { GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import ReactHtmlParser, {
@@ -55,6 +56,13 @@ export default function Page({
             node.attribs.class.replace("m-auto", "mx-auto");
           }
 
+          if (
+            node.attribs.class &&
+            node.attribs.class.includes("break-words")
+          ) {
+            node.attribs.class += " overflow-scroll";
+          }
+
           return convertNodeToElement(node, index, transformFunction);
         }
 
@@ -75,5 +83,17 @@ export default function Page({
     transform: transformFunction,
   });
 
-  return <div className="bg-gray-200 dark:bg-gray-800">{transformedHtml}</div>;
+  return (
+    <>
+      <Head>
+        <title>View Your Chat</title>
+        <meta
+          name="description"
+          content="View your ChatGPT chat and share it with everyone else!"
+        />
+        <link rel="icon" href="/128x128.png" />
+      </Head>
+      <div className="bg-gray-200 dark:bg-gray-800">{transformedHtml}</div>;
+    </>
+  );
 }
