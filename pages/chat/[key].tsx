@@ -69,7 +69,7 @@ export default function Page({
         case "img": {
           node.attribs.src = "/user-icon-2.png";
           node.attribs.srcset = "";
-          node.attribs.class = "bg-transparent";
+          node.attribs.class = "bg-transparent max-h-[30px] max-w-[30px]";
           return convertNodeToElement(node, index, transformFunction);
         }
 
