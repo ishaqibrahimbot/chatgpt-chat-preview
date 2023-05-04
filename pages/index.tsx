@@ -76,6 +76,25 @@ export default function Home() {
             </a>
           </div>
         </section>
+        <section className="flex flex-col items-center p-8 bg-white bg-opacity-20 rounded-lg shadow-lg mt-12">
+          <h2 className="text-3xl font-semibold font-poppins mb-6">
+            Watch the Demo
+          </h2>
+          <p className="font-poppins mb-6 text-justify">
+            Click the button below to watch a video demo of the Share ChatGPT
+            Chat extension in action.
+          </p>
+          <div className="mt-4">
+            <a
+              href="https://www.loom.com/share/92f33131a46c48f19e67cab7f35d28af"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#FFFFFF] text-[#8B0000] font-semibold px-8 py-3 rounded hover:bg-[#F0F0F0] transition-colors duration-300"
+            >
+              Watch Demo
+            </a>
+          </div>
+        </section>
       </main>
       <footer className="py-4 px-4 text-center mt-12">
         <p className="font-poppins mb-4">Made with ❤️ by Ishaq Ibrahim</p>
