@@ -15,6 +15,13 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
       </Head>
       <header className="text-center mb-12 flex flex-col items-center">
         <img src="/128x128.png" alt="About" className="h-24 w-24 mb-4" />
@@ -71,7 +78,25 @@ export default function Home() {
         </section>
       </main>
       <footer className="py-4 px-4 text-center mt-12">
-        <p className="font-poppins">Made with ❤️ by Ishaq Ibrahim</p>
+        <p className="font-poppins mb-4">Made with ❤️ by Ishaq Ibrahim</p>
+        <div className="flex justify-center space-x-4">
+          <a
+            href="https://github.com/ishaqibrahimbot"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white hover:text-[#F0F0F0] transition-colors duration-300"
+          >
+            <i className="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ishaq-ibrahim/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white hover:text-[#F0F0F0] transition-colors duration-300"
+          >
+            <i className="fab fa-linkedin text-2xl"></i>
+          </a>
+        </div>
       </footer>
     </div>
   );
