@@ -5,6 +5,9 @@ import ReactHtmlParser, {
   convertNodeToElement,
   Transform,
 } from "react-html-parser";
+import { useRouter } from "next/router";
+import Loading from "@/components/Loading";
+import Navbar from "@/components/Navbar";
 
 export async function getStaticPaths() {
   return {
@@ -43,6 +46,12 @@ export default function Page({
   htmlContent,
   s3Key,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
+
   const transformFunction: Transform = (node, index) => {
     if (node.type === "tag") {
       switch (node.name) {
@@ -60,7 +69,7 @@ export default function Page({
             node.attribs.class &&
             node.attribs.class.includes("break-words")
           ) {
-            node.attribs.class += " overflow-scroll";
+            node.attribs.class += " overflow-auto";
           }
 
           return convertNodeToElement(node, index, transformFunction);
@@ -93,6 +102,7 @@ export default function Page({
         />
         <link rel="icon" href="/128x128.png" />
       </Head>
+      <Navbar />
       <div className="bg-gray-200 dark:bg-gray-800">{transformedHtml}</div>;
     </>
   );

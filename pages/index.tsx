@@ -57,6 +57,35 @@ export default function Home() {
             </div>
           </section>
         </div>
+        <section className="flex flex-col items-center p-8 bg-white bg-opacity-20 rounded-lg shadow-lg mb-12">
+          <h2 className="text-3xl font-semibold font-poppins mb-6">
+            Explore Examples
+          </h2>
+          <p className="font-poppins mb-6 text-justify">
+            Check out these examples to see the Share ChatGPT Chat extension in
+            action.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2 mt-4">
+            <a
+              href="https://www.sharechatgptchat.com/chat/jscodeshift_crash_course--c9cb5392-6525-4f87-a16b-c6b318cf4ce1"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#FFFFFF] text-[#8B0000] p-6 rounded-lg shadow-lg flex flex-col items-center font-semibold hover:bg-[#F0F0F0] transition-colors duration-300"
+            >
+              <p className="text-justify">A crash course on JSCodeShift</p>
+            </a>
+            <a
+              href="https://www.sharechatgptchat.com/chat/mastering_ssh_security--32bb738e-807c-4549-99f4-b023c22557c6"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-[#FFFFFF] text-[#8B0000] p-6 rounded-lg shadow-lg flex flex-col items-center font-semibold hover:bg-[#F0F0F0] transition-colors duration-300"
+            >
+              <p className="text-justify">
+                A deep dive of SSH with a hands-on project
+              </p>
+            </a>
+          </div>
+        </section>
         <section className="flex flex-col items-center p-8 bg-white bg-opacity-20 rounded-lg shadow-lg">
           <h2 className="text-3xl font-semibold font-poppins mb-6">
             Get the Extension
