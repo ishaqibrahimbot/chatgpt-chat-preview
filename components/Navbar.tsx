@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           Home
         </Link>
         <Link
-          href="https://platform.openai.com/signup"
+          href="https://chat.openai.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[#F0F0F0] transition-colors duration-300"

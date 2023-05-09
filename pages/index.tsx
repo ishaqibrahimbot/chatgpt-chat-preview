@@ -27,6 +27,24 @@ export default function Home() {
         <img src="/128x128.png" alt="About" className="h-24 w-24 mb-4" />
         <h1 className="text-5xl font-bold font-poppins">Share ChatGPT Chat</h1>
       </header>
+      <div className="absolute top-4 right-6 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+        <a
+          href="https://chrome.google.com/webstore/detail/share-chatgpt-chat/gebneacjfaipjcmfcejggnlkmlcmfegd?hl=en&authuser=0"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-white text-[#8B0000] font-semibold px-2 sm:px-4 py-1 sm:py-2 rounded text-sm sm:text-base hover:bg-[#F0F0F0] transition-colors duration-300"
+        >
+          Get Extension
+        </a>
+        <a
+          href="https://chat.openai.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-white text-[#8B0000] font-semibold px-2 sm:px-4 py-1 sm:py-2 rounded text-sm sm:text-base hover:bg-[#F0F0F0] transition-colors duration-300"
+        >
+          Try ChatGPT
+        </a>
+      </div>
       <main>
         <div className="grid gap-12 sm:grid-cols-2 mb-12">
           <section className="flex flex-col items-center p-6 bg-white bg-opacity-20 rounded-lg shadow-lg">
